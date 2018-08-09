@@ -217,6 +217,7 @@ detect(PyObject *self, PyObject *args, PyObject *kwArgs) {
                            textBytesFound,
                            details,
                            resultChunks);
+    Py_DECREF(resultChunks);
   } else {
     result = Py_BuildValue("(OiO)",
                            isReliable ? Py_True : Py_False,
